@@ -6,8 +6,8 @@
 _offline="false"
 _git="false"
 pkgname=gpg-key-info
-pkgver="0.0.0.0.0.0.0.0.0.0.0.1"
-_commit="999c0937264854568e4991d6e2df44c37f05ba85"
+pkgver="0.0.0.0.0.0.0.0.0.0.0.1.1"
+_commit="d41a60481a0f445a0f936ff29179c5198ae205bb"
 pkgrel=1
 _pkgdesc=(
   "Extracts information from a GNU Privacy Guard key file."
@@ -66,7 +66,7 @@ elif [[ "${_git}" == false ]]; then
     _sum="d4f4179c6e4ce1702c5fe6af132669e8ec4d0378428f69518f2926b969663a91"
   elif [[ "${_tag_name}" == "commit" ]]; then
     _src="${_tarname}.zip::${_url}/archive/${_commit}.zip"
-    _sum='25ad2e5272b8550c2ce9bac62cddf75a67f817abe07d875f2a7c7d770e997092'
+    _sum='2339782280d98cf1ca698f4018709b265cd68e3ad0d9a22f48318d54a9ca15a7'
   fi
 fi
 source=(
