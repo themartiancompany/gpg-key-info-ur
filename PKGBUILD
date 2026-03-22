@@ -43,8 +43,11 @@ if [[ ! -v "_evmfs" ]]; then
     _evmfs="false"
   fi
 fi
+if [[ ! -v "_git_service" ]]; then
+  _git_service="gitlab"
+fi
 if [[ ! -v "_git_http" ]]; then
-  _git_http="gitlab"
+  _git_http="${_git_service}"
 fi
 if [[ ! -v "_archive_format" ]]; then
   if [[ "${_git_http}" == "github" ]]; then
@@ -62,6 +65,9 @@ fi
 if [[ ! -v "_docs" ]]; then
   _docs="true"
 fi
+if [[ ! -v "_ns" ]]; then
+  _ns="themartiancompany"
+fi
 _py="python"
 _pkg=gpg-key-info
 pkgbase="${_pkg}"
@@ -75,7 +81,7 @@ if [[ "${_docs}" == "true" ]]; then
 fi
 pkgver="0.0.0.0.0.0.0.0.0.0.0.1.1.1"
 _commit="e46d8f37428655780e4c510ee0a8073c7914308d"
-pkgrel=3
+pkgrel=4
 _pkgdesc=(
   "Extracts information from"
   "a GNU Privacy Guard key file."
@@ -85,7 +91,6 @@ arch=(
   'any'
 )
 _http="https://${_git_http}.com"
-_ns="themartiancompany"
 url="${_http}/${_ns}/${_pkg}"
 license=(
   'AGPL3'
@@ -139,6 +144,8 @@ if [[ "${_offline}" == "true" ]]; then
 fi
 _sum="6bc2ddea098c944326af6354fcd5725407c031d8f40b5a5264894d478c67e1f2"
 _sig_sum="9c5a1a84c4c57acd75a96ad6475f675bb34ea7bcd414474ce2d277c45af3bd20"
+_github_sum="SKIP"
+_github_sig_sum="SKIP"
 # Dvorak
 _evmfs_ns="0x87003Bd6C074C713783df04f36517451fF34CBEf"
 # Truocolo
